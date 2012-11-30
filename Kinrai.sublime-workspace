@@ -1,0 +1,324 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"user",
+				"user-menu"
+			],
+			[
+				"Re",
+				"Recipe"
+			],
+			[
+				"json",
+				"json_encode"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 4523,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/main.css",
+			"settings":
+			{
+				"buffer_size": 5719,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 463,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 102.0,
+		"selected_items":
+		[
+			[
+				"fetch",
+				"Fetch: File"
+			],
+			[
+				"fetc",
+				"Fetch: File"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"INSTAL",
+				"Package Control: Install Package"
+			],
+			[
+				"settings",
+				"Preferences: Settings - User"
+			],
+			[
+				"user",
+				"Preferences: Package Control Settings – User"
+			]
+		],
+		"width": 453.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/kinrai.io/robots.txt",
+		"/var/www/kinrai.io/js/main.js",
+		"/var/www/kinrai.io/js/plugins.js",
+		"/var/www/kinrai.io/js/vendor/underscore.js",
+		"/var/www/kinrai.io/js/vendor/backbone.js",
+		"/home/armnovo/.config/sublime-text-2/Packages/User/Fetch.sublime-settings",
+		"/var/www/sellstagram/profile.php",
+		"/var/www/sellstagram/facebook/facebook_function.php",
+		"/var/www/sellstagram/upload_profile.php",
+		"/home/armnovo/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/armnovo/.config/sublime-text-2/Packages/User/Package Control.sublime-settings",
+		"/home/armnovo/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/var/www/sellstagram/facebook/facebook.php",
+		"/var/www/sellstagram/android/src/com/snapp/sampleapp/SampleApp.java",
+		"/home/armnovo/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Recipe",
+			"space"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 4523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1516,
+								1516
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1914.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/main.css",
+					"settings":
+					{
+						"buffer_size": 5719,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1842,
+								1842
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1805.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/main.js",
+					"settings":
+					{
+						"buffer_size": 463,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								463,
+								463
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"index.html"
+			],
+			[
+				"main.js",
+				"js/main.js"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"main.css",
+				"css/main.css"
+			],
+			[
+				"pli",
+				"js/plugins.js"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"in",
+				"index.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"ge",
+				"/home/armnovo/GenuineHero.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 270.0,
+	"status_bar_visible": true
+}

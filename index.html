@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Kinrai.io</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h1>Kinrai.io</h1>
+
+        <form action="" id="new-menu">
+            <label for="user-name">Name</label>
+            <input type="text" name="user-name" id="user-name">
+
+            <label for="user-menu">Menu</label>
+            <input type="text" name="user-menu" id="user-menu">
+
+            <input type="submit" value="Submit">
+        </form>
+        
+        <div id="menus-container">
+            
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+        <script src="js/vendor/underscore.js"></script>
+        <script src="js/vendor/backbone.js"></script>
+        <script src="js/plugins.js"></script>
+        <!-- <script src="js/main.js"></script> -->
+        
+        <script>
+            (function($) {
+
+                var Menu = Backbone.Model.extend({
+                    defaults : function() {
+                        return {
+                            name : "",
+                            menu : ""
+                        }
+                    }
+                });
+
+                var MenuList = Backbone.Collection.extend({
+                    model : Menu
+                });
+
+                var menus = new MenuList();
+
+                var MenuView = Backbone.View.extend({
+                    model : new Menu(),
+                    tagName : 'div',
+                    initialize: function() {
+                        this.template = _.template($('#menus-template').html());
+                    },
+                    render: function() {
+                        this.$el.html(this.template(this.model.toJSON()));
+                        return this;
+                    }
+                });
+
+                var MenusView = Backbone.View.extend({
+                    model : menus,
+                    el : $('#menus-container'),
+                    events : {
+                        'click .edit' : 'edit',
+                        'click .delete' : 'delete',
+                        'blur .menu-menu' : 'close'
+                    },
+                    initialize : function() {
+                        this.model.on('add', this.render, this);
+                    },
+                    edit : function(event) {
+                        event.preventDefault();
+                        this.$('.menu-menu').attr('contenteditable', true).focus();
+                    },
+                    delete : function(event) {
+                        event.preventDefault();
+                    },
+                    close : function() {
+                        var newMenu = this.$('.menu-menu').text();
+                        this.model.set('menu', newMenu);
+                        this.$('.menu-menu').removeAttr('contenteditable');
+                    },
+                    render : function() {
+                        var self = this;
+                        self.$el.html('');
+                        _.each(this.model.toArray(), function(menu,i) {
+                            var newItem = new MenuView({model : menu});
+                            self.$el.append(newItem.render().$el);
+                        });
+                        return this;
+                    }
+                });
+
+                $(document).ready(function() {
+                    $('#new-menu').on('submit', function(e) {
+                        e.preventDefault();
+                        var newMenu = new Menu({
+                            name : $('#user-name').val(),
+                            menu : $('#user-menu').val()
+                        });
+
+                        menus.add(newMenu);
+
+                        console.log(menus.toJSON());
+                        return false;
+                    });
+
+                    var appView = new MenusView();
+                });
+                
+            })(jQuery);
+
+        </script>
+
+        <script type="text/template" id="menus-template">
+            <span class="menu-name"><%= name %>:</span> 
+            <span class="menu-menu"><%= menu %></span>
+            <a href="#" class="edit">[edit]</a>
+            <a href="#" class="delete">[delete]</a>
+        </script>
+
+    </body>
+</html>
